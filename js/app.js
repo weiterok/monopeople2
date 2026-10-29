@@ -237,10 +237,24 @@
       </div>`;
   }
 
+  function buildVideo(page) {
+    return `
+      <div class="page page--video"${page.hard ? ' data-density="hard"' : ''}>
+        <div class="video-box">
+          <div class="video-box__title">${esc(page.title || 'Відео')}</div>
+          <video class="video-box__player" controls playsinline preload="metadata"
+            ${page.posterUrl ? `poster="${esc(page.posterUrl)}"` : ''}
+            src="${esc(page.videoUrl)}"></video>
+          <div class="video-box__missing" hidden>Відео скоро з'явиться</div>
+        </div>
+      </div>`;
+  }
+
   function buildPage(page, issue, pageNum, totalPages) {
     if (page.kind === 'cover') return buildCover(page, issue);
     if (page.kind === 'back') return buildBack(page, issue);
     if (page.kind === 'image') return buildImage(page);
+    if (page.kind === 'video') return buildVideo(page);
     return buildContent(page, issue, pageNum, totalPages);
   }
 
@@ -370,7 +384,16 @@
     let soundPlayedForThisFlip = false;
 
     function attachHandlers() {
+      document.querySelectorAll('#book .video-box__player').forEach((v) => {
+        ['mousedown', 'touchstart', 'pointerdown'].forEach((ev) =>
+          v.addEventListener(ev, (e) => e.stopPropagation()));
+        v.addEventListener('error', () => {
+          v.hidden = true;
+          v.parentElement.querySelector('.video-box__missing').hidden = false;
+        });
+      });
       pageFlip.on('flip', () => {
+        document.querySelectorAll('#book video').forEach((v) => v.pause());
         updateIndicator();
         if (!soundPlayedForThisFlip) playFlipSound();
         soundPlayedForThisFlip = false;

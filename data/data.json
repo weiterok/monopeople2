@@ -2,8 +2,8 @@
   "issue": {
     "masthead": "MONOPEOPLE",
     "subtitle": "Що відбувається поза роботою?",
-    "number": "Випуск 1",
-    "period": "Жовтень 2026",
+    "number": "Випуск 2",
+    "period": "Листопад 2026",
     "tagline": "The Monobank — про життя всередині",
     "price": ""
   },
@@ -107,16 +107,36 @@
     {
       "kind": "image",
       "imageUrl": "images/monopeople/page-20.jpg",
-      "alt": "Сторінка 20",
-      "hard": true,
+      "alt": "Сторінка 20"
+    },
+    {
+      "kind": "image",
+      "imageUrl": "images/monopeople/page-21.jpg",
+      "alt": "Сторінка 21"
+    },
+    {
+      "kind": "image",
+      "imageUrl": "images/monopeople/page-22.jpg",
+      "alt": "Сторінка 22"
+    },
+    {
+      "kind": "image",
+      "imageUrl": "images/monopeople/page-23.jpg",
+      "alt": "Сторінка 23",
       "overlayLink": {
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScdEBpEqEoKkfOQ_gpGlG8gxgev0l5DRsPiEKZqc10HvY9GFQ/viewform?pli=1&pli=1",
         "label": "Поділись з нами",
-        "top": 81.1,
-        "left": 2.4,
-        "width": 94.1,
-        "height": 8.1
+        "top": 85.7,
+        "left": 5,
+        "width": 89.6,
+        "height": 7.7
       }
+    },
+    {
+      "kind": "video",
+      "videoUrl": "video/monopeople.mp4",
+      "title": "Відео випуску",
+      "hard": true
     }
   ]
 }
