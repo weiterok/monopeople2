@@ -107,7 +107,14 @@
     {
       "kind": "image",
       "imageUrl": "images/monopeople/page-20.jpg",
-      "alt": "Сторінка 20"
+      "alt": "Сторінка 20",
+      "video": {
+        "url": "video/monopeople.mp4",
+        "top": 17.87,
+        "left": 4.54,
+        "width": 59.7,
+        "height": 75.0
+      }
     },
     {
       "kind": "image",
@@ -130,12 +137,7 @@
         "left": 5,
         "width": 89.6,
         "height": 7.7
-      }
-    },
-    {
-      "kind": "video",
-      "videoUrl": "video/monopeople.mp4",
-      "title": "Відео випуску",
+      },
       "hard": true
     }
   ]
