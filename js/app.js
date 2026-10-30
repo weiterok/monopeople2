@@ -440,7 +440,7 @@
       indicator.textContent = `${pageFlip.getCurrentPageIndex() + 1} / ${pageFlip.getPageCount()}`;
     }
 
-    createPageFlip();
+    createPageFlip(Math.max(0, (parseInt(new URLSearchParams(location.search).get('page'), 10) || 1) - 1));
 
     let resizeTimer = null;
     window.addEventListener('resize', () => {
