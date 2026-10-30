@@ -129,7 +129,12 @@
     {
       "kind": "image",
       "imageUrl": "images/monopeople/page-23.jpg",
-      "alt": "Сторінка 23",
+      "alt": "Сторінка 23"
+    },
+    {
+      "kind": "image",
+      "imageUrl": "images/monopeople/page-24.jpg",
+      "alt": "Сторінка 24",
       "overlayLink": {
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScdEBpEqEoKkfOQ_gpGlG8gxgev0l5DRsPiEKZqc10HvY9GFQ/viewform?pli=1&pli=1",
         "label": "Поділись з нами",
